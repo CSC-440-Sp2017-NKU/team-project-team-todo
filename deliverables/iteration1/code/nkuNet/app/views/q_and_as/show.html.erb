@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logins:</strong>
+  <%= @q_and_a.Logins %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @q_and_a.rating %>
+</p>
+
+<p>
+  <strong>Active flag:</strong>
+  <%= @q_and_a.active_flag %>
+</p>
+
+<p>
+  <strong>Q a text:</strong>
+  <%= @q_and_a.q_a_text %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @q_and_a.create_time %>
+</p>
+
+<%= link_to 'Edit', edit_q_and_a_path(@q_and_a) %> |
+<%= link_to 'Back', q_and_as_path %>

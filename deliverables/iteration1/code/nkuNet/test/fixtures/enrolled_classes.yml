@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Logins: 1
+  Courses: 1
+  active: false
+
+two:
+  Logins: 1
+  Courses: 1
+  active: false

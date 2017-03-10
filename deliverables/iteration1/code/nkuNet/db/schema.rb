@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170310011553) do
+ActiveRecord::Schema.define(version: 20170310030244) do
+
+  create_table "colleges", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.integer  "Majors"
+    t.text     "description"
+    t.string   "course_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["Majors"], name: "index_courses_on_Majors"
+  end
+
+  create_table "enrolled_classes", force: :cascade do |t|
+    t.integer  "Logins"
+    t.integer  "Courses"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["Courses"], name: "index_enrolled_classes_on_Courses"
+    t.index ["Logins"], name: "index_enrolled_classes_on_Logins"
+  end
 
   create_table "login_types", force: :cascade do |t|
     t.string   "title"
@@ -28,6 +54,25 @@ ActiveRecord::Schema.define(version: 20170310011553) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["LoginTypes"], name: "index_logins_on_LoginTypes"
+  end
+
+  create_table "majors", force: :cascade do |t|
+    t.integer  "Colleges"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["Colleges"], name: "index_majors_on_Colleges"
+  end
+
+  create_table "q_and_as", force: :cascade do |t|
+    t.integer  "Logins"
+    t.integer  "rating"
+    t.boolean  "active_flag"
+    t.text     "q_a_text"
+    t.date     "create_time"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["Logins"], name: "index_q_and_as_on_Logins"
   end
 
 end
