@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
   resources :q_and_as
   resources :enrolled_classes
   resources :courses
