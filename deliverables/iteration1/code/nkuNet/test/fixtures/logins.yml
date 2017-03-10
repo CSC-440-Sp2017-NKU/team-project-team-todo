@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  password: MyString
+  first_name: MyString
+  last_name: MyString
+  LoginTypes: 1
+  active_flag: false
+
+two:
+  password: MyString
+  first_name: MyString
+  last_name: MyString
+  LoginTypes: 1
+  active_flag: false
