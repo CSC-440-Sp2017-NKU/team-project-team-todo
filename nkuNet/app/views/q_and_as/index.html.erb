@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Q And As</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logins</th>
+      <th>Rating</th>
+      <th>Active flag</th>
+      <th>Q a text</th>
+      <th>Create time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @q_and_as.each do |q_and_a| %>
+      <tr>
+        <td><%= q_and_a.Logins %></td>
+        <td><%= q_and_a.rating %></td>
+        <td><%= q_and_a.active_flag %></td>
+        <td><%= q_and_a.q_a_text %></td>
+        <td><%= q_and_a.create_time %></td>
+        <td><%= link_to 'Show', q_and_a %></td>
+        <td><%= link_to 'Edit', edit_q_and_a_path(q_and_a) %></td>
+        <td><%= link_to 'Destroy', q_and_a, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Q And A', new_q_and_a_path %>

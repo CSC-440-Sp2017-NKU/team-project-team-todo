@@ -1,0 +1,2 @@
+class LoginType < ApplicationRecord
+end

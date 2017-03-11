@@ -1,0 +1,2 @@
+class EnrolledClass < ApplicationRecord
+end
