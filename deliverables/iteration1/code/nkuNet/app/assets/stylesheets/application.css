@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+
+.header{
+	font-size: 24pt;
+}
+
+.question{
+	font-size: 12pt;
+}
+
+.answer{
+	font-size: 10pt;
+
+}
+
+.banner{
+	background-color: #FFD700;
+	color: black;
+}
+
+.menu{
+	color: white;
+	background-color: black;
+}
+
+.generic{
+	background-color: white;
+	color: black;
+}
