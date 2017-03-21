@@ -1,2 +1,0 @@
-class EnrolledClass < ApplicationRecord
-end

@@ -13,15 +13,17 @@
  *= require_tree .
  *= require_self
  */
-
-
 .header{
 	font-size: 24pt;
+	color: white;
 }
 
 .question{
 	font-size: 12pt;
+	background-color: black;
+	color: white;
 }
+
 
 .answer{
 	font-size: 10pt;
@@ -29,7 +31,7 @@
 }
 
 .banner{
-	background-color: #FFD700;
+	background-color: #FFD700; /*GOLD*/
 	color: black;
 }
 

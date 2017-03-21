@@ -1,0 +1,7 @@
+<p><%= answer.author %> answered:</p>
+
+<blockquote>
+    <%= answer.body %>
+</blockquote>
+
+<%= link_to 'Destroy', [answer.question, answer], method: :delete, data:{ confirm: 'Are you sure?' } %>

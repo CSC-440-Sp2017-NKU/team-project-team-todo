@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-  get 'home/index'
-
-  resources :q_and_as
-  resources :enrolled_classes
-  resources :courses
-  resources :majors
-  resources :colleges
-  resources :logins
-  resources :login_types
+  resources :questions do
+    resources :answers, :only => [:create, :destroy]
+  end
+  
+  
+  
+  #logging in and out for sessions
+  #get 'login' => 'user_sessions#new'
+  #post 'login' => 'user_session#create'
+  #delete 'logout' => 'user_sessions#destroy'
+  
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  root "questions#index"
 end

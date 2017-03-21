@@ -1,2 +1,0 @@
-class QAndA < ApplicationRecord
-end
